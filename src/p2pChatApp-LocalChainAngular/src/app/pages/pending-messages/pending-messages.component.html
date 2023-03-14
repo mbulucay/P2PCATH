@@ -1,0 +1,11 @@
+<p *ngIf="pendingMessages.length === 0">There are no pending messages</p>
+
+<div class = "container" *ngIf="pendingMessages.length > 0">
+
+    <app-message-table
+        [messages]="pendingMessages"
+    ></app-message-table>
+
+    <button (click) = "minePendingMessages()" class = "btn btn-primary btn-outline-light" >Start Transactions</button>
+
+</div>

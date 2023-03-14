@@ -1,0 +1,31 @@
+<div class = "container">
+
+    <h1>Create Message</h1>
+    <p>Send message</p>
+
+    <br>
+
+    <div class="form-group">
+        
+        <label>From address</label>
+        <input type="text" class = "form-control" [(ngModel)] = "walletKey.publicKey" disabled>
+
+        <small id="fromAddressHelp" class="form-text text-muted">
+	    	This is your wallet address. You cannot change it because you can only spend your own coins.
+	    </small>
+
+    </div>
+
+    <div class = "from-group">
+        <label for = "toAddress">To Address </label>
+        <input type = "text" class = "form-control" [(ngModel)] = "newMsg.toAddress">
+    </div>
+
+    <div class = "from-group">
+        <label for = "content"> Content</label>
+        <input type="text" class = "form-control" [(ngModel)] = "newMsg.content">
+    </div>
+
+    <button (click)="createMessage()" class="btn btn-primary">Sign & send message</button>
+
+</div>

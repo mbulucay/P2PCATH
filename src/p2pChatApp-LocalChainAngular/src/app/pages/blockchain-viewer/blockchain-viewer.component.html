@@ -1,0 +1,34 @@
+<div class = "container">
+
+    <h3> Demo </h3>
+    <p> 
+        User Private Key: <br> 
+        be88fa8e398793421351708048b11448caf40598f75c40095ce93a2710571197
+        <br><br>
+        Public Key 04415c4445d26f144417ecaec902fe91658b8b575be7e8aa1557e9b37ea4e216d4d3c56363ab935190ccfed7525770c80b4a8623413ef27307411934845774ff71
+        <br>============================================================================================<br>
+        System Private Key: <br>
+        
+    </p>
+
+    <br><br>
+
+    <h1>Blocks On Chain</h1>
+    <p>Each card represents a block in chain. For detail click the block on the card</p>
+
+    <app-block-view
+        *ngFor="let block of blocks" 
+		[block]="block"
+        (click)="showMessages(block)">
+        ></app-block-view>
+
+</div>
+
+<br><br>
+
+<div class = "container">
+    <h1> Messages in block </h1>    
+    <app-message-table
+        [messages]="selectedBlock.messages"
+    ></app-message-table>
+</div>
